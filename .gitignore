@@ -3,6 +3,8 @@
 
 # Xcode user data
 xcuserdata/
+*.xcuserdatad/
+*.xcworkspace/xcuserdata/
 *.xcuserstate
 *.xcscmblueprint
 
