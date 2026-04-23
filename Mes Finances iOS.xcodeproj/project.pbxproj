@@ -6,13 +6,8 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		3F07B2A72F9ACB910048D446 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3F07B2A62F9ACB910048D446 /* .gitignore */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		3F07B2922F9AC8740048D446 /* Mes Finances iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mes Finances iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F07B2A62F9ACB910048D446 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -39,7 +34,6 @@
 			children = (
 				3F07B2942F9AC8740048D446 /* Mes Finances iOS */,
 				3F07B2932F9AC8740048D446 /* Products */,
-				3F07B2A62F9ACB910048D446 /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,7 +109,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F07B2A72F9ACB910048D446 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,8 @@ xcuserdata/
 # Xcode build artifacts
 build/
 DerivedData/
+*.xcarchive
+*.xcresult
 *.moved-aside
 *.ipa
 *.dSYM.zip
@@ -42,4 +44,4 @@ playground.xcworkspace
 
 # Project-specific ignores
 index.html
-MIGRATION_IOS.md
+/MIGRATION_IOS.md
