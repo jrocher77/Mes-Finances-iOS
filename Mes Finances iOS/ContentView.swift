@@ -6,16 +6,36 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        WebAppView()
+            .ignoresSafeArea()
+    }
+}
+
+private struct WebAppView: UIViewRepresentable {
+    func makeUIView(context: Context) -> WKWebView {
+        let configuration = WKWebViewConfiguration()
+        configuration.defaultWebpagePreferences.allowsContentJavaScript = true
+
+        let webView = WKWebView(frame: .zero, configuration: configuration)
+        loadLocalWebApp(in: webView)
+        return webView
+    }
+
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+    }
+
+    private func loadLocalWebApp(in webView: WKWebView) {
+        guard let indexURL = Bundle.main.url(forResource: "index", withExtension: "html") else {
+            webView.loadHTMLString("<h1>Erreur</h1><p>index.html introuvable dans le bundle.</p>", baseURL: nil)
+            return
         }
-        .padding()
+
+        let readAccessURL = indexURL.deletingLastPathComponent()
+        webView.loadFileURL(indexURL, allowingReadAccessTo: readAccessURL)
     }
 }
 
